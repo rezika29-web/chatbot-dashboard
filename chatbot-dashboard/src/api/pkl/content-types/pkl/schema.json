@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pkls",
+  "info": {
+    "singularName": "pkl",
+    "pluralName": "pkls",
+    "displayName": "PKL"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Context": {
+      "type": "richtext"
+    },
+    "Keyword": {
+      "type": "json"
+    }
+  }
+}
