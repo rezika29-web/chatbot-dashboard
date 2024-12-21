@@ -4,10 +4,11 @@
   "info": {
     "singularName": "pkl",
     "pluralName": "pkls",
-    "displayName": "PKL"
+    "displayName": "PKL",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chats",
+  "info": {
+    "singularName": "chat",
+    "pluralName": "chats",
+    "displayName": "Chat"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Chatid": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "text"
+    }
+  }
+}
