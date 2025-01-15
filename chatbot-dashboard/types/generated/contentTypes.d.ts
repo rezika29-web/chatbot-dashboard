@@ -369,37 +369,11 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiChatChat extends Struct.CollectionTypeSchema {
-  collectionName: 'chats';
-  info: {
-    displayName: 'Chat';
-    pluralName: 'chats';
-    singularName: 'chat';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    Chatid: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::chat.chat'> &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    Text: Schema.Attribute.Text;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiPklPkl extends Struct.CollectionTypeSchema {
   collectionName: 'pkls';
   info: {
     description: '';
-    displayName: 'PKL';
+    displayName: 'Magang';
     pluralName: 'pkls';
     singularName: 'pkl';
   };
@@ -411,7 +385,7 @@ export interface ApiPklPkl extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Keyword: Schema.Attribute.JSON;
+    keybot: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::pkl.pkl'> &
       Schema.Attribute.Private;
@@ -439,7 +413,7 @@ export interface ApiSkripsiSkripsi extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Keyword: Schema.Attribute.JSON;
+    keybot: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -963,7 +937,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::chat.chat': ApiChatChat;
       'api::pkl.pkl': ApiPklPkl;
       'api::skripsi.skripsi': ApiSkripsiSkripsi;
       'plugin::content-releases.release': PluginContentReleasesRelease;

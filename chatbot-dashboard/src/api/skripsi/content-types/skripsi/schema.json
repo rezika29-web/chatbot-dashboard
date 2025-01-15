@@ -19,8 +19,9 @@
     "Context": {
       "type": "richtext"
     },
-    "Keyword": {
-      "type": "json"
+    "keybot": {
+      "type": "string",
+      "required": true
     }
   }
 }

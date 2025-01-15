@@ -4,7 +4,7 @@
   "info": {
     "singularName": "pkl",
     "pluralName": "pkls",
-    "displayName": "PKL",
+    "displayName": "Magang",
     "description": ""
   },
   "options": {
@@ -18,8 +18,9 @@
     "Context": {
       "type": "richtext"
     },
-    "Keyword": {
-      "type": "json"
+    "keybot": {
+      "type": "string",
+      "required": true
     }
   }
 }
